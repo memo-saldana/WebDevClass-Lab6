@@ -10,7 +10,8 @@ if(process.env.NODE_ENV = 'production'){
   MAPBOX_TOKEN = process.env.MAPBOX_TOKEN,
   DARK_SKY_SECRET_KEY = process.env.MAPBOX_TOKEN;
 } else {
-  { MAPBOX_TOKEN, DARK_SKY_SECRET_KEY } = require('./credentials');
+  MAPBOX_TOKEN = require('./credentials').MAPBOX_TOKEN;
+  DARK_SKY_SECRET_KEY = require('./credentials').DARK_SKY_SECRET_KEY;
 }
 
 app.get('/weather', (req, res) => {
