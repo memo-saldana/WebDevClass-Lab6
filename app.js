@@ -8,7 +8,7 @@ let MAPBOX_TOKEN, DARK_SKY_SECRET_KEY;
 
 if(process.env.NODE_ENV = 'production'){
   MAPBOX_TOKEN = process.env.MAPBOX_TOKEN,
-  DARK_SKY_SECRET_KEY = process.env.MAPBOX_TOKEN;
+  DARK_SKY_SECRET_KEY = process.env.DARK_SKY_SECRET_KEY;
 } else {
   MAPBOX_TOKEN = require('./credentials').MAPBOX_TOKEN;
   DARK_SKY_SECRET_KEY = require('./credentials').DARK_SKY_SECRET_KEY;
