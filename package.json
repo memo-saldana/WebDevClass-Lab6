@@ -1,0 +1,25 @@
+{
+  "name": "webdevclass-lab6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memo-saldana/WebDevClass-Lab6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/memo-saldana/WebDevClass-Lab6/issues"
+  },
+  "homepage": "https://github.com/memo-saldana/WebDevClass-Lab6#readme"
+}
