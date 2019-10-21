@@ -85,11 +85,9 @@ app.get('/weather', function(req, res) {
 })
 
 app.get('*', function(req, res) {
-    res.send({
-        error: 'Oops! Ruta no valida'
-    })
+  return res.json({ error: 'Ruta invalida'})
 })
 
 app.listen(PORT, ()=> {
-    console.log('Running on port '+ PORT)
+  console.log('Running on port '+ PORT)
 });
