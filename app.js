@@ -4,13 +4,14 @@ const express = require('express'),
       mapboxURL = 'https://api.mapbox.com',
       darkSkyURL = 'https://api.darksky.net',
       PORT = process.env.PORT || 3000;
-      
-  if(process.env.NODE_ENV = 'production'){
-    const MAPBOX_TOKEN = process.env.MAPBOX_TOKEN,
-    DARK_SKY_SECRET_KEY = process.env.MAPBOX_TOKEN;
-  } else {
-    const { MAPBOX_TOKEN, DARK_SKY_SECRET_KEY } = require('./credentials');
-  }
+let MAPBOX_TOKEN, DARK_SKY_SECRET_KEY;
+
+if(process.env.NODE_ENV = 'production'){
+  MAPBOX_TOKEN = process.env.MAPBOX_TOKEN,
+  DARK_SKY_SECRET_KEY = process.env.MAPBOX_TOKEN;
+} else {
+  { MAPBOX_TOKEN, DARK_SKY_SECRET_KEY } = require('./credentials');
+}
 
 app.get('/weather', (req, res) => {
   if (!req.query.search) res.send({ error: 'Debes enviar una ciudad' })
